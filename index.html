@@ -1,0 +1,546 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanskruti Gite — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+    <!-- FLOATING DOODLES (background decoration) -->
+    <div class="doodles" aria-hidden="true">
+        <span class="doodle d1">🌸</span>
+        <span class="doodle d2">⭐</span>
+        <span class="doodle d3">🌿</span>
+        <span class="doodle d4">✨</span>
+        <span class="doodle d5">🍀</span>
+        <span class="doodle d6">🌙</span>
+        <span class="doodle d7">💫</span>
+        <span class="doodle d8">🌺</span>
+        <span class="doodle d9">🍃</span>
+        <span class="doodle d10">⭐</span>
+        <span class="doodle d11">🌸</span>
+        <span class="doodle d12">✿</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">SG<span>.</span></a>
+        <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>  
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Achievements</a>
+        <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ═══ SECTION 1: HERO ═══ -->
+    <section id="hero" class="page-section">
+        <div class="sticker s-star">⭐</div>
+        <div class="sticker s-flower">🌸</div>
+        <div class="sticker s-sparkle">✨</div>
+        <div class="sticker s-leaf">🌿</div>
+
+        <div class="hero-wrap">
+        <div class="hero-left">
+            <h1 class="hero-name">
+            <span class="name-top">Sanskruti</span>
+            <span class="name-bottom"><em>Mohan Gite</em></span>
+            </h1>
+            <p class="hero-typed">
+            <span id="typed"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-desc">
+            BTech Computer Science and Design student at K.K.Wagh, Nashik.
+            Blending code, creativity, and innovation to design meaningful digital experiences.
+            </p>
+            <div class="hero-btns">
+            <a href="#projects" class="btn-fill">See My Work ✦</a>
+            <a href="#contact" class="btn-outline">Say Hello →</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="photo-frame">
+            <div class="photo-circle">
+                <img src="photo.jpeg" alt="Sanskruti" />
+                
+            </div>
+            <div class="photo-caption">
+                <span class="caveat">Nashik, India</span>
+            </div>
+            <div class="frame-sticker">🎀</div>
+            </div>
+
+            <div class="hero-stats">
+            <div class="hstat">
+                <span class="hstat-num">9.23</span>
+                <span class="hstat-lbl">CGPA</span>
+            </div>
+            <div class="hstat-divider"></div>
+            <div class="hstat">
+                <span class="hstat-num">3+</span>
+                <span class="hstat-lbl">Projects</span>
+            </div>
+            <div class="hstat-divider"></div>
+            <div class="hstat">
+                <span class="hstat-num"><span class="lc-float-num" id="lc-total">0</span></span>
+                <span class="hstat-lbl">Problems Solved</span>
+            </div>
+            </div>
+            <div class="open-badge">
+            <span class="badge-dot"></span>
+            Open to Internships
+            </div>
+        </div>
+        </div>
+
+        <div class="scroll-hint">
+        <span class="caveat">scroll down</span>
+        <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION 2: ABOUT ═══ -->
+    <section id="about" class="page-section alt-bg">
+        <div class="sticker s-moon">🌙</div>
+        <div class="sticker s-clover">🍀</div>
+        <div class="sticker s-sparkle2">💫</div>
+
+        <div class="section-inner">
+        <div class="section-label">
+            <span class="sec-num caveat">01</span>
+            <span class="sec-line"></span>
+            <span class="sec-tag">About Me</span>
+        </div>
+
+        <div class="about-layout">
+            <div class="about-text-col">
+            <h2 class="sec-title">A little about <em>me</em> 🌸</h2>
+            <p class="sec-body">
+                Hi! I'm <strong>Sanskruti Gite</strong> — a Computer Science &amp; Design student who loves
+                building things that look great and work even better. I'm in my 3rd year at
+                K.K. Wagh Institute, Nashik, with a CGPA of <strong>9.23</strong>.
+            </p>
+            <p class="sec-body">
+                From ML models to full-stack Django apps to AI disaster-response systems —
+                I love working across the whole stack.
+                Always looking for the next cool project.
+            </p>
+            <div class="tag-cloud">
+                <span>Full Stack</span>
+                <span>Machine Learning</span>
+                <span>UI Design</span>
+                <span>Problem Solver</span>
+                <span>Team Leader</span>
+                <span>Quick Learner</span>
+            </div>
+            </div>
+
+            <div class="edu-col">
+            <h3 class="col-title caveat">Education 📚</h3>
+            <div class="edu-card">
+                <div class="edu-year">2023 – 2027</div>
+                <div class="edu-degree">BTech — CS &amp; Design</div>
+                <div class="edu-place">K.K. Wagh Institute, Nashik</div>
+                <div class="edu-score">CGPA 9.23 ✦</div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-year">2023</div>
+                <div class="edu-degree">SSC Board — 12th</div>
+                <div class="edu-place">Matoshree College, Mhasrul</div>
+                <div class="edu-score">76%</div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-year">2021</div>
+                <div class="edu-degree">ICSE — 10th</div>
+                <div class="edu-place">Podar International, Nashik</div>
+                <div class="edu-score">93.83%</div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+        </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION 2.5: SKILLS ═══ -->
+<section id="skills" class="page-section alt-bg">
+    <div class="sticker s-rose">🌺</div>
+    <div class="sticker s-star2">⭐</div>
+
+    <div class="section-inner">
+        <div class="section-label">
+            <span class="sec-num caveat">02</span>
+            <span class="sec-line"></span>
+            <span class="sec-tag">Skills & Tools</span>
+        </div>
+        <h2 class="sec-title">What I <em>know</em> 💡</h2>
+
+        <!-- Technical Skills -->
+        <div class="skills-block">
+            <h3 class="skills-sub-title">💻 Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-pill">Python</div>
+                <div class="skill-pill">C / C++</div>
+                <div class="skill-pill">Java</div>
+                <div class="skill-pill">HTML</div>
+                <div class="skill-pill">CSS</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">SQL</div>
+                <div class="skill-pill">Data Structures</div>
+                <div class="skill-pill">Machine Learning</div>
+                <div class="skill-pill">Django / DRF</div>
+                <div class="skill-pill">NumPy / Pandas</div>
+                <div class="skill-pill">Scikit-learn</div>
+            </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skills-block">
+            <h3 class="skills-sub-title">🛠️ Tools & Platforms</h3>
+            <div class="skills-grid">
+                <div class="skill-pill tool">VS Code</div>
+                <div class="skill-pill tool">Git & GitHub</div>
+                <div class="skill-pill tool">Figma</div>
+                <div class="skill-pill tool">Canva</div>
+                <div class="skill-pill tool">MySQL</div>
+                <div class="skill-pill tool">MongoDB</div>
+                <div class="skill-pill tool">Google Colab</div>
+                <div class="skill-pill tool">Unity</div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-block">
+            <h3 class="skills-sub-title">🌸 Soft Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-pill soft">Leadership</div>
+                <div class="skill-pill soft">Communication</div>
+                <div class="skill-pill soft">Problem Solving</div>
+                <div class="skill-pill soft">Teamwork</div>
+                <div class="skill-pill soft">Time Management</div>
+                <div class="skill-pill soft">Creativity</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ═══ SECTION 3: PROJECTS ═══ -->
+    <section id="projects" class="page-section alt-bg">
+        <div class="sticker s-gem">💎</div>
+        <div class="sticker s-flower2">🌼</div>
+
+        <div class="section-inner">
+        <div class="section-label">
+            <span class="sec-num caveat">03</span>
+            <span class="sec-line"></span>
+            <span class="sec-tag">Projects</span>
+        </div>
+
+        <div class="projects-header-row">
+            <h2 class="sec-title">Things I've <em>built</em> 🚀</h2>
+            <a href="https://github.com/Sanskrutigite05" target="_blank" class="btn-outline sm">GitHub →</a>
+        </div>
+
+        <div class="proj-grid">
+            <div class="proj-card featured-card">
+            <div class="proj-sticker">🤖</div>
+            <div class="proj-badge ongoing">Ongoing</div>
+            <div class="proj-num-big caveat">01</div>
+            <h3 class="proj-title">INDRA-RAG</h3>
+            <p class="proj-subtitle">Natural-Hazard Disaster Response System for India</p>
+            <p class="proj-desc">
+                A scalable RAG-driven AI system converting large-scale safety data into
+                actionable disaster-response insights. I work on backend pipelines and AI infrastructure.
+            </p>
+            <div class="proj-tags">
+                <span>Python</span><span>RAG</span><span>AI/ML</span><span>Data Pipeline</span>
+            </div>
+            <a href="https://github.com/Sanskrutigite05" target="_blank" class="proj-link">View on GitHub →</a>
+            </div>
+
+            <div class="proj-card">
+            <div class="proj-sticker">📝</div>
+            <div class="proj-badge complete">Complete</div>
+            <div class="proj-num-big caveat">02</div>
+            <h3 class="proj-title">Blogging Website</h3>
+            <p class="proj-subtitle">Full Stack · Apr 2026</p>
+            <p class="proj-desc">
+                Full-featured Django blogging platform — auth, post creation, editing,
+                commenting, category filtering, admin panel, and responsive UI.
+            </p>
+            <div class="proj-tags">
+                <span>Django</span><span>Python</span><span>MySQL</span><span>JS</span>
+            </div>
+            <a href="https://github.com/Sanskrutigite05" target="_blank" class="proj-link">View on GitHub →</a>
+            </div>
+
+            <div class="proj-card">
+            <div class="proj-sticker">📊</div>
+            <div class="proj-badge ml">ML</div>
+            <div class="proj-num-big caveat">03</div>
+            <h3 class="proj-title">Churn Prediction</h3>
+            <p class="proj-subtitle">Machine Learning · Oct 2025</p>
+            <p class="proj-desc">
+                ML model predicting customer churn using classification algorithms.
+                Full pipeline: preprocessing, feature engineering, model training.
+            </p>
+            <div class="proj-tags">
+                <span>Pandas</span><span>Scikit-learn</span><span>NumPy</span>
+            </div>
+            <a href="https://github.com/Sanskrutigite05" target="_blank" class="proj-link">View on GitHub →</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- ═══ SECTION 4: EXPERIENCE ═══ -->
+<section id="experience" class="page-section">
+    <div class="section-inner">
+        <div class="section-label">
+            <span class="sec-num caveat">04</span>
+            <span class="sec-line"></span>
+            <span class="sec-tag">Experience</span>
+        </div>
+        <h2 class="sec-title">What I've <em>done</em> ✨</h2>
+
+        <div class="exp-skills-layout">
+
+            <div class="exp-col">
+                <h3 class="col-title caveat">Roles & Activities 🎀</h3>
+                <div class="exp-timeline">
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <div class="exp-role">Treasurer — DESOC Club</div>
+                            <div class="exp-date">Sept 2025 – Present</div>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <div class="exp-role">Core Committee Member — DESOC</div>
+                            <div class="exp-date">Oct 2024 – Sept 2025</div>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <div class="exp-role">Aura Esports Event Organiser</div>
+                            <div class="exp-date">Co-curricular · DESOC</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WORK EXPERIENCE COL -->
+            <div class="work-exp-col">
+                <h3 class="col-title caveat">Work Experience 💼</h3>
+                <div class="work-empty-card">
+                    <div class="work-empty-icon">🌱</div>
+                    <div class="work-empty-title">No internships yet —</div>
+                    <div class="work-empty-sub">but actively looking! Open to opportunities in Full Stack, ML, and UI Design.</div>
+                    <a href="#contact" class="work-cta">Let's connect →</a>
+                </div>
+                <div class="work-coming-soon">
+                    <span>✦</span>
+                    <span class="caveat">more coming soon...</span>
+                    <span>✦</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    </section>
+    </section>
+
+    <!-- ═══ SECTION 5: CERTS & ACHIEVEMENTS ═══ -->
+    <section id="certifications" class="page-section">
+        <div class="sticker s-trophy">🏆</div>
+        <div class="sticker s-sparkle3">✨</div>
+
+        <div class="section-inner">
+        <div class="section-label">
+            <span class="sec-num caveat">05</span>
+            <span class="sec-line"></span>
+            <span class="sec-tag">Certifications &amp; Achievements</span>
+        </div>
+
+        <h2 class="sec-title">Things I've <em>earned</em> 🎓</h2>
+
+        <div class="certs-layout">
+            <div class="cert-col">
+            <h3 class="col-title caveat">Certifications 📜</h3>
+            <div class="cert-list">
+                <div class="cert-item">
+                <div class="cert-icon">📘</div>
+                <div>
+                    <div class="cert-name">Problem Solving through Programming in C</div>
+                    <div class="cert-meta">NPTEL · Elite &nbsp;|&nbsp; Jan–Apr 2024</div>
+                </div>
+                </div>
+                <div class="cert-item">
+                <div class="cert-icon">🐍</div>
+                <div>
+                    <div class="cert-name">Programming, Data Structures &amp; Algorithms using Python</div>
+                    <div class="cert-meta">NPTEL &nbsp;|&nbsp; Jan–Mar 2024</div>
+                </div>
+                </div>
+                <div class="cert-item">
+                <div class="cert-icon">🗄</div>
+                <div>
+                    <div class="cert-name">SQL for Beginners</div>
+                    <div class="cert-meta">Scaler &nbsp;|&nbsp; July 2025</div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="achieve-col">
+            <h3 class="col-title caveat">Achievements 🌟</h3>
+            <div class="achieve-grid">
+                <div class="achieve-card">
+                <span class="achieve-emoji">🏆</span>
+                <div class="achieve-text">Top 3 Every Semester</div>
+                <div class="achieve-sub">All semesters at K.K. Wagh</div>
+                </div>
+                <div class="achieve-card">
+                <span class="achieve-emoji">🎓</span>
+                <div class="achieve-text">Merit Scholarship</div>
+                <div class="achieve-sub">Academic Excellence Award</div>
+                </div>
+                <div class="achieve-card">
+                <span class="achieve-emoji">🎮</span>
+                <div class="achieve-text">Aura Esports</div>
+                <div class="achieve-sub">Event Organiser · DESOC</div>
+                </div>
+                <div class="achieve-card">
+                <span class="achieve-emoji">💼</span>
+                <div class="achieve-text">DESOC Treasurer</div>
+                <div class="achieve-sub">Sept 2025 – Present</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ═══ SECTION 6: CONTACT ═══ -->
+    <section id="contact" class="page-section alt-bg">
+        <div class="sticker s-heart">🌸</div>
+        <div class="sticker s-wave">👋</div>
+
+        <div class="section-inner contact-inner">
+        <div class="section-label">
+            <span class="sec-num caveat">06</span>
+            <span class="sec-line"></span>
+            <span class="sec-tag">Contact</span>
+        </div>
+
+        <h2 class="sec-title">Let's <em>talk</em> ☕</h2>
+        <p class="sec-body contact-sub">
+            Open to internships, collaborations, and interesting projects. I reply fast!
+        </p>
+
+        <div class="contact-layout">
+            <div class="contact-info">
+            <a href="mailto:sanskrutigite6532@gmail.com" class="contact-chip">
+                <span>✉️</span>
+                <div>
+                <div class="chip-label">Email</div>
+                <div class="chip-val">sanskrutigite6532@gmail.com</div>
+                </div>
+            </a>
+            <a href="tel:7620724900" class="contact-chip">
+                <span>📞</span>
+                <div>
+                <div class="chip-label">Phone</div>
+                <div class="chip-val">7620724900</div>
+                </div>
+            </a>
+            <a href="https://github.com/Sanskrutigite05" target="_blank" class="contact-chip">
+                <span><img src="icons8-github-100.png" alt="GitHub" style="width:32px; height:32px; border-radius:50%;" /></span>
+                <div>
+                <div class="chip-label">GitHub</div>
+                <div class="chip-val">Sanskrutigite05</div>
+                </div>
+            </a>
+            <div class="contact-chip no-hover">
+                <span>📍</span>
+                <div>
+                <div class="chip-label">Location</div>
+                <div class="chip-val">Nashik, Maharashtra</div>
+                </div>
+            </div>
+            </div>
+
+                <form class="contact-form" action="https://formspree.io/f/mzdowvew" method="POST" id="contact-form">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#contact" />
+                    <input type="hidden" name="_subject" value="New message from your Portfolio!" />
+                <div class="form-row">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="your@email.com" required />
+                </div>
+                </div>
+                <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" placeholder="Hey Sanskruti, I'd love to..." required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send Message ✦</button>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+<footer id="footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <a href="#hero" class="footer-logo">SG<span>.</span></a>
+            <p class="footer-tagline">Designed &amp; built with passion from Nashik, India.</p>
+        </div>
+
+        <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#experience">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-right">
+            <p class="footer-copy">© 2026 Sanskruti Mohan Gite</p>
+            <a href="mailto:sanskrutigite6532@gmail.com" class="footer-email">sanskrutigite6532@gmail.com</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
