@@ -7,10 +7,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Caveat:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+
+    <!-- GAMER MODE SPLASH -->
+    <div id="gamer-splash" aria-hidden="true">
+        <div class="splash-inner">
+            <div class="splash-pixel-border">
+                <div class="splash-title">GAMER MODE</div>
+                <div class="splash-sub">ACTIVATED</div>
+                <div class="splash-blink">▶ PRESS START ◀</div>
+                <div class="splash-esc">[ ESC ] TO EXIT</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESC HINT (shown in gamer mode) -->
+    <div id="esc-hint">[ ESC ] EXIT GAMER MODE</div>
 
     <!-- FLOATING DOODLES (background decoration) -->
     <div class="doodles" aria-hidden="true">
@@ -30,7 +45,7 @@
 
     <!-- NAVBAR -->
     <nav id="navbar">
-        <a href="#hero" class="nav-logo">SG<span>.</span></a>
+        <a href="#hero" class="nav-logo">S<span id="gamer-trigger" title="Press G for Gamer Mode 🎮">G</span><span class="nav-dot">.</span></a>
         <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -548,6 +563,30 @@
         </div>
     </div>
 </footer>
+
+    <!-- PRESS G HINT (normal mode only) -->
+    <div id="press-g-hint" aria-hidden="true">
+        Press <kbd>G</kbd> for Game Mode 🎮
+    </div>
+
+    <!-- 🎀 CLAW MACHINE WIDGET (gamer mode only) -->
+    <div id="claw-widget" aria-hidden="true">
+        <div id="claw-whead">
+            <span id="claw-wtitle">🎀 PLAY GAME</span>
+            <div id="claw-whead-right">
+                <span id="claw-wscorebox">WINS: 0 &nbsp;|&nbsp; PLAYS: 3</span>
+                <button id="claw-wclose" aria-label="Close">✕</button>
+            </div>
+        </div>
+        <div id="claw-canvas-wrap">
+            <canvas id="claw-canvas" width="480" height="340"></canvas>
+            <div id="claw-win-banner"></div>
+        </div>
+        <div id="claw-wfooter">← → MOVE &nbsp;·&nbsp; SPACE DROP &nbsp;·&nbsp; R RESET</div>
+    </div>
+
+    <!-- Floating game button (gamer mode only) -->
+    <button id="claw-toggle" aria-label="Play Claw Game">🎀 PLAY GAME</button>
 
     <script src="script.js"></script>
     </body>
