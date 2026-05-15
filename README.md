@@ -1,59 +1,69 @@
-🌸 Sanskruti Gite — Personal Portfolio
-A creative, interactive personal portfolio website built with vanilla HTML, CSS, and JavaScript. Features a unique Gamer Mode 🎮, 
-live LeetCode stats, a playable claw machine game, and smooth animations throughout.
-Live Site: sanskrutigite05.github.io/portfolio
+# 🌸 Sanskruti Gite — Personal Portfolio
 
-✨ Features
+A creative and interactive personal portfolio website built using **Vanilla HTML, CSS, and JavaScript**.  
+This portfolio combines modern UI design with fun gamer-inspired experiences including a unique **Gamer Mode 🎮**, live coding statistics, smooth animations, and an interactive mini-game.
 
-Gamer Mode — Press G (or click the G in the navbar logo) to activate a full pixel-art theme with retro fonts, a custom pixel avatar, and gamer-style typed phrases
-Live LeetCode Stats — Automatically fetches total problems solved, with easy/medium/hard breakdown and animated counter
-Claw Machine Game — A playable pixel claw machine mini-game inside gamer mode (use arrow keys + space)
-Typed Animation — Rotating role titles that switch between normal and gamer phrases
-Scroll Reveal Animations — Elements animate in as you scroll
-Skill Bars — Animated progress bars for technical skills
-Contact Form — Powered by Formspree, no backend needed
-Fully Responsive — Works on mobile, tablet, and desktop
+---
 
+## 🚀 Live Website
 
-🗂️ Project Structure
-portfolio/
-├── index.html          # Main HTML structure
-├── style.css           # All styles and animations
-├── script.js           # JavaScript — interactions, animations, API calls
-├── photo.jpeg          # Your real profile photo
-├── pixel-avatar.jpg    # Pixel art avatar shown in gamer mode
-└── icons8-github-100.png
+🔗 **Portfolio:**  
+https://sanskrutigite05.github.io/portfolio
 
-🛠️ Tech Stack
-HTML5 — Semantic structure
-CSS3 — Custom properties, animations, responsive grid/flexbox
-Vanilla JavaScript — No frameworks
-Fonts — Playfair Display, DM Sans, Caveat, Press Start 2P (Google Fonts)
-Icons — Devicon CDN
-Form — Formspree
-LeetCode API — alfa-leetcode-api with fallbacks
+---
 
-🎮 Gamer Mode
-Press G on your keyboard (or click the G in SG. in the navbar) to activate Gamer Mode:
+# ✨ Features
 
+## 🎮 Gamer Mode
+Press **G** on your keyboard *(or click the **G** in the navbar logo)* to activate a complete retro gaming experience.
 
-📡 LeetCode Stats
-Stats are fetched live from the LeetCode API using the username Sanskruti005. The fetch chain tries three APIs in order for reliability:
+### Includes:
+- Pixel-art themed interface
+- Retro gaming fonts
+- Custom pixel avatar
+- Gamer-style typed phrases
+- Interactive claw machine mini-game
 
-alfa-leetcode-api.onrender.com
-leetcode-api-faisalshohag.vercel.app
-leetcode-stats-api.vercel.app
+---
 
+## 📱 Fully Responsive
+Optimized for:
+- Desktop 💻
+- Tablet 📱
+- Mobile 📲
 
-Note: Stats may take a few hours to reflect newly solved problems due to API caching.
+---
 
+# 🛠️ Tech Stack
 
-🙋‍♀️ About Me
-Sanskruti Mohan Gite — BTech Computer Science & Design student at K.K. Wagh Institute, Nashik (CGPA 9.23). 
-Passionate about full-stack development, machine learning, and UI design.
+| Technology | Usage |
+|------------|-------|
+| **HTML5** | Semantic webpage structure |
+| **CSS3** | Styling, animations, responsive design |
+| **Vanilla JavaScript** | Interactivity and functionality |
+| **Google Fonts** | Typography |
+| **Devicon CDN** | Tech stack icons |
+| **Formspree** | Contact form handling |
+| **LeetCode APIs** | Live coding statistics |
 
-📧 sanskrutigite6532@gmail.com
-📍 Nashik, Maharashtra, India
+---
 
+# 📡 LeetCode API Sources
 
-Designed & built with passion from Nashik, India 🌸
+LeetCode statistics are fetched using the username **Sanskruti005**.
+
+> ⚠️ **Note:** Newly solved problems may take some time to update due to API caching.
+
+---
+
+# 📬 Contact
+
+📧 **Email:**  
+sanskrutigite6532@gmail.com
+
+📍 **Location:**  
+Nashik, Maharashtra, India
+
+---
+
+# 🌸 Designed & Built with Passion by Sanskruti Gite ✨
