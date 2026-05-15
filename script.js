@@ -396,6 +396,20 @@
 
     let isGamer = false;
 
+    const PIXEL_AVATAR = 'pixel-avatar.jpg';
+    const REAL_PHOTO   = 'photo.jpeg';
+
+    function swapPhoto(toGamer) {
+        const img = document.getElementById('hero-photo');
+        if (!img) return;
+        img.style.transition = 'opacity 0.4s';
+        img.style.opacity = '0';
+        setTimeout(() => {
+            img.src = toGamer ? PIXEL_AVATAR : REAL_PHOTO;
+            img.style.opacity = '1';
+        }, 400);
+    }
+
     function enterGamerMode() {
         isGamer = true;
         // Show splash
@@ -405,6 +419,7 @@
             body.classList.add('gamer-mode');
             // Swap typed phrases
             window.__gamerPhrases = GAMER_PHRASES;
+            swapPhoto(true);
         }, 1800);
     }
 
@@ -412,6 +427,7 @@
         isGamer = false;
         body.classList.remove('gamer-mode');
         window.__gamerPhrases = null;
+        swapPhoto(false);
     }
 
     // Click the G
