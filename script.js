@@ -225,48 +225,80 @@
     /* ── LEETCODE LIVE STATS ── */
 (function fetchLeetCode() {
     const username = 'Sanskruti005';
-    const TOTAL_QUESTIONS = 3500; // approx total on LeetCode
+    const TOTAL_QUESTIONS = 3500;
 
-    fetch(`https://leetcode-stats-api.herokuapp.com/${username}`)
-        .then(r => r.json())
-        .then(data => {
-            if (data.status === 'error') return;
+    function applyStats(total, easy, medium, hard) {
+        const pct = Math.round((total / TOTAL_QUESTIONS) * 100);
+        animateCount('lc-total', total);
+        setTimeout(() => {
+            const bar   = document.getElementById('lc-bar');
+            const pctEl = document.getElementById('lc-pct');
+            if (bar)   bar.style.width = Math.min(pct, 100) + '%';
+            if (pctEl) pctEl.textContent = pct + '%';
+        }, 400);
+        const easyEl   = document.getElementById('lc-easy');
+        const mediumEl = document.getElementById('lc-medium');
+        const hardEl   = document.getElementById('lc-hard');
+        if (easyEl)   easyEl.textContent   = easy;
+        if (mediumEl) mediumEl.textContent  = medium;
+        if (hardEl)   hardEl.textContent    = hard;
+    }
 
-            const total  = data.totalSolved  || 0;
-            const easy   = data.easySolved   || 0;
-            const medium = data.mediumSolved  || 0;
-            const hard   = data.hardSolved   || 0;
-            const pct    = Math.round((total / TOTAL_QUESTIONS) * 100);
+    // Try alfa-leetcode-api (reliable, CORS-enabled)
+    function tryAlfaApi() {
+        return fetch(`https://alfa-leetcode-api.onrender.com/${username}/solved`)
+            .then(r => { if (!r.ok) throw new Error('alfa failed'); return r.json(); })
+            .then(data => {
+                const total  = data.solvedProblem  || 0;
+                const easy   = data.easySolved     || 0;
+                const medium = data.mediumSolved    || 0;
+                const hard   = data.hardSolved      || 0;
+                if (!total) throw new Error('no data');
+                applyStats(total, easy, medium, hard);
+            });
+    }
 
-            // Animated counter
-            animateCount('lc-total', total);
+    // Fallback: leetcode-api.com
+    function tryLeetcodeApiCom() {
+        return fetch(`https://leetcode-api-faisalshohag.vercel.app/${username}`)
+            .then(r => { if (!r.ok) throw new Error('faisalshohag failed'); return r.json(); })
+            .then(data => {
+                const total  = data.totalSolved  || 0;
+                const easy   = data.easySolved   || 0;
+                const medium = data.mediumSolved  || 0;
+                const hard   = data.hardSolved    || 0;
+                if (!total) throw new Error('no data');
+                applyStats(total, easy, medium, hard);
+            });
+    }
 
-            // Progress bar + percentage
-            setTimeout(() => {
-                const bar = document.getElementById('lc-bar');
-                const pctEl = document.getElementById('lc-pct');
-                if (bar) bar.style.width = Math.min(pct, 100) + '%';
-                if (pctEl) pctEl.textContent = pct + '%';
-            }, 400);
+    // Fallback 2: leetcode-stats-api.vercel.app
+    function tryVercelApi() {
+        return fetch(`https://leetcode-stats-api.vercel.app/${username}`)
+            .then(r => { if (!r.ok) throw new Error('vercel failed'); return r.json(); })
+            .then(data => {
+                const total  = data.totalSolved  || 0;
+                const easy   = data.easySolved   || 0;
+                const medium = data.mediumSolved  || 0;
+                const hard   = data.hardSolved    || 0;
+                if (!total) throw new Error('no data');
+                applyStats(total, easy, medium, hard);
+            });
+    }
 
-            // Breakdown
-            document.getElementById('lc-easy').textContent   = easy;
-            document.getElementById('lc-medium').textContent = medium;
-            document.getElementById('lc-hard').textContent   = hard;
-        })
-        .catch(() => {
-            // silently fail — dashes stay
-        });
+    tryAlfaApi()
+        .catch(() => tryLeetcodeApiCom())
+        .catch(() => tryVercelApi())
+        .catch(() => { /* silently fail — dashes stay */ });
 
     function animateCount(id, target) {
         const el = document.getElementById(id);
         if (!el) return;
         const duration = 1800;
         const start = performance.now();
-
         function step(now) {
             const progress = Math.min((now - start) / duration, 1);
-            const ease = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+            const ease = 1 - Math.pow(1 - progress, 3);
             el.textContent = Math.floor(ease * target);
             if (progress < 1) requestAnimationFrame(step);
             else el.textContent = target;
